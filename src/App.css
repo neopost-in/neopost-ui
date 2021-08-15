@@ -1,0 +1,14 @@
+.App {
+    height: 100%;
+}
+
+.ContentBody {
+    margin-top: 75px;
+}
+
+.MyFooter {
+    z-index: 999;
+    /*position: fixed;*/
+    width: 100%;
+    bottom: 0;
+}

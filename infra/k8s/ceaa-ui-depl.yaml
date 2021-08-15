@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neopost-ui-depl
+  labels:
+    app: neopost-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: neopost-ui
+  template:
+    metadata:
+      labels:
+        app: neopost-ui
+    spec:
+      containers:
+        - name: neopost-ui
+          image: anshumanc6/ceaa-ui
+          ports:
+            - containerPort: 80
+          env:
+            - name: BACKEND_URL
+              value: "http://neopost-srv:8080"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: neopost-ui-srv
+spec:
+  selector:
+    app: neopost-ui
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP

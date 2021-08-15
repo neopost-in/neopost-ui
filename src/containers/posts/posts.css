@@ -1,0 +1,24 @@
+.PostsPage {
+    background-color: white;
+    min-height: 100%;
+}
+
+.TitleText {
+    font-weight: bold;
+    font-size: large;
+}
+
+.PostImagePlaceHolder {
+    max-height: 70px;
+    max-width: 70px;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(-45deg, rgba(208,255,97,1) 0%, rgba(43,198,13,1) 100%);
+}
+.PaginatorSection {
+    margin: 20px 0;
+}
+.CreatePostFormsContainer {
+    background: white;
+    min-height: 100%;
+}
